@@ -12,7 +12,7 @@ lab=Vin}
 N -80 -100 -80 50 {
 lab=Vin}
 N -10 -70 -10 20 {
-lab=#net1}
+lab=Vout}
 N -110 -20 -80 -20 {
 lab=Vin}
 N -10 -160 -10 -130 {
@@ -33,8 +33,9 @@ N 10 -130 10 -100 {
 lab=Vdd}
 N -10 -130 10 -130 {
 lab=Vdd}
-N -10 -20 70 -20 {
-lab=#net1}
+N -10 -20 140 -20 {
+lab=Vout}
+N 90 -20 90 20 {}
 C {sky130_fd_pr/nfet_01v8.sym} -30 50 0 0 {name=M1
 L=0.15
 W=2
@@ -64,6 +65,12 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {devices/lab_pin.sym} -170 -20 0 0 {name=p1 sig_type=std_logic lab=Vin}
-C {devices/lab_pin.sym} 70 -20 0 1 {name=p2 sig_type=std_logic lab=Vout}
+C {devices/lab_pin.sym} 140 -20 0 1 {name=p2 sig_type=std_logic lab=Vout}
 C {devices/lab_pin.sym} -10 -160 0 0 {name=p4 sig_type=std_logic lab=Vdd}
 C {devices/lab_pin.sym} -10 110 0 0 {name=p3 sig_type=std_logic lab=Vss}
+C {devices/capa.sym} 90 50 0 0 {name=C1
+m=1
+value=1p
+footprint=1206
+device="ceramic capacitor"}
+C {devices/gnd.sym} 90 80 0 0 {name=l4 lab=GND}
