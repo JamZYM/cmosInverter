@@ -52,7 +52,7 @@ C {devices/code_shown.sym} -520 -230 0 0 {name=lib only_toplevel=false value="
 .lib /usr/local/share/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice tt
 "}
 C {devices/code_shown.sym} -520 -140 0 0 {name=dc_simulation1 only_toplevel=false value="
-.tran 100ps 12ns
+.tran 100ps 20ns
 .save all
 .end
 "}
